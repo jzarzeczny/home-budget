@@ -1,0 +1,93 @@
+@use "styles/space.scss" as *;
+@use "styles/fonts.scss" as *;
+@use "styles/colors.scss" as *;
+
+.main {
+  grid-area: "main";
+}
+
+.container {
+  margin: 2rem 0;
+}
+
+.queueContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: $space-s;
+}
+
+.smallBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  padding: $space-s;
+  border: 1px solid $main-color;
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.stackedBoxes {
+}
+
+.phaseTitle {
+  margin-bottom: $space-l;
+}
+
+.firstBox {
+  position: relative;
+  background-color: #fff;
+}
+
+.middleBox {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: -1;
+}
+.bottomBox {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: -1;
+}
+
+.currentExpense {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.phaseTitle {
+  font-size: $font-s;
+  font-weight: 400;
+}
+
+.box {
+  display: grid;
+  grid-template-rows: 24px auto 24px;
+  width: 150px;
+  height: 150px;
+  padding: $space-s;
+  border: 1px solid $main-color;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .place {
+    align-self: center;
+    justify-self: center;
+  }
+  .name {
+    align-self: center;
+    justify-self: center;
+  }
+  .cost {
+    align-self: center;
+    justify-self: end;
+  }
+}

@@ -1,0 +1,21 @@
+@use "styles/space" as *;
+@use "styles/fonts" as *;
+@use "styles/colors" as *;
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin-bottom: $space-m;
+
+  label legend {
+    font-size: $font-s;
+    margin-bottom: $space-s;
+  }
+}
+
+.inputText {
+  padding: $space-s $space-s $space-s 0;
+  border: none;
+  border-bottom: 2px solid $main-color;
+}

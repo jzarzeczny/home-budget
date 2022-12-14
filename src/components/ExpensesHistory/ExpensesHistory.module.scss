@@ -1,0 +1,18 @@
+@use "styles/colors.scss" as *;
+
+.list__item {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 5rem;
+
+  &__left {
+    grid-column: 1/2;
+  }
+  &__right {
+    grid-column: 2/3;
+    .category__items {
+      margin-left: 1rem;
+    }
+  }
+}

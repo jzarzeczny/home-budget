@@ -1,0 +1,40 @@
+@use "styles/colors.scss" as *;
+@use "styles/fonts.scss" as *;
+@use "styles/space.scss" as *;
+
+$padding-line-to-number: 0.25rem;
+
+.constrainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  font-size: $font-m;
+  font-weight: 400;
+  padding-bottom: $padding-line-to-number;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $main-color;
+  }
+
+  .number {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .separator {
+    display: block;
+    height: 2rem;
+    width: 2px;
+    background-color: $main-color;
+    margin: -$padding-line-to-number calc($space-s);
+  }
+}
+
+.constrainer__right {
+  padding-left: 1rem;
+}

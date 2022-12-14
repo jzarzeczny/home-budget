@@ -1,0 +1,11 @@
+@use "@/breakpoints" as *;
+
+.sidePanel {
+  display: none;
+  @include media-breakpoint-up(tablet) {
+    grid-area: sidePanel;
+    display: block;
+    background-color: pink;
+    min-height: calc(100vh - 2 * 64px);
+  }
+}

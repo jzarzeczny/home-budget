@@ -1,0 +1,21 @@
+@use "styles/colors.scss" as *;
+
+.list__container {
+  position: relative;
+  display: grid;
+  padding: 1rem;
+  padding-top: 4rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 3px;
+    background-color: $main-color;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

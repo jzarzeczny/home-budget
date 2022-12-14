@@ -1,0 +1,21 @@
+@use "@/breakpoints.scss" as *;
+
+.container {
+  display: block;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @include media-breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.line {
+  width: 90%;
+  height: 2px;
+  background-color: black;
+}

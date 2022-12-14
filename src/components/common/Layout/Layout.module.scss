@@ -1,0 +1,19 @@
+@use "@/breakpoints" as *;
+
+.layout {
+  display: inline-block;
+  width: 100%;
+}
+
+@include media-breakpoint-up(tablet) {
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header header "
+      "sidePanel main"
+      "footer footer ";
+
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-columns: 100px 1fr;
+  }
+}

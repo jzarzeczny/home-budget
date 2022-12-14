@@ -1,0 +1,16 @@
+@use "styles/space.scss" as *;
+@use "styles/fonts.scss" as *;
+
+.header {
+  font-size: $font-l;
+  font-weight: 400;
+  margin: $space-l 0;
+  text-align: center;
+}
+
+.small_header {
+  font-size: $font-m;
+  font-weight: 400;
+  margin: $space-l 0;
+  text-align: center;
+}
