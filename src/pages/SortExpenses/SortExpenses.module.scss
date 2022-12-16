@@ -3,11 +3,7 @@
 @use "@/colors.scss" as *;
 
 .main {
-  grid-area: "main";
-}
-
-.container {
-  margin: 2rem 0;
+  margin: 2rem 1rem;
 }
 
 .queueContainer {
@@ -15,6 +11,18 @@
   justify-content: space-around;
   align-items: center;
   padding: $space-s;
+}
+
+.introContainer,
+.formContainer {
+  margin-bottom: 4rem;
+}
+
+.costForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .smallBox {
