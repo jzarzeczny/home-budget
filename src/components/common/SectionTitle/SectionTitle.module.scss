@@ -1,5 +1,5 @@
-@use "styles/space.scss" as *;
-@use "styles/fonts.scss" as *;
+@use "@/space.scss" as *;
+@use "@/fonts.scss" as *;
 
 .header {
   font-size: $font-l;

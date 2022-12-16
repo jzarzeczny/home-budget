@@ -1,6 +1,6 @@
-@use "styles/space" as *;
-@use "styles/fonts" as *;
-@use "styles/colors" as *;
+@use "@/space" as *;
+@use "@/fonts" as *;
+@use "@/colors" as *;
 
 .page {
   display: grid;

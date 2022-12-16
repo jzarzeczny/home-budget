@@ -4,6 +4,9 @@ import {
   Outlet,
   RouterProvider,
 } from "@tanstack/react-router";
+import { CategoriesPage } from "pages/Categories/Categories";
+import { HistoryPage } from "pages/History/History";
+import { SortExpensesPage } from "pages/SortExpenses/SortExpenses";
 import { Landing } from "./pages/Landing/Landing";
 
 const rootRoute = createRouteConfig({
@@ -19,20 +22,32 @@ const indexRoute = rootRoute.createRoute({
   component: Landing,
 });
 
-const routeConfig = rootRoute.addChildren([indexRoute]);
+const categoriesRoute = rootRoute.createRoute({
+  path: "/categories",
+  component: CategoriesPage,
+});
+
+const historyRoutes = rootRoute.createRoute({
+  path: "/history",
+  component: HistoryPage,
+});
+
+const sortExpenses = rootRoute.createRoute({
+  path: "/sortExpenses",
+  component: SortExpensesPage,
+});
+
+const routeConfig = rootRoute.addChildren([
+  indexRoute,
+  categoriesRoute,
+  historyRoutes,
+  sortExpenses,
+]);
 
 const router = createReactRouter({ routeConfig });
 
 function App() {
   return <RouterProvider router={router} />;
-}
-
-function Index() {
-  return (
-    <div>
-      <h3>Welcome Home!</h3>
-    </div>
-  );
 }
 
 export default App;

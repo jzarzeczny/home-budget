@@ -1,6 +1,6 @@
-@use "styles/space.scss" as *;
-@use "styles/fonts.scss" as *;
-@use "styles/colors.scss" as *;
+@use "@/space.scss" as *;
+@use "@/fonts.scss" as *;
+@use "@/colors.scss" as *;
 
 .main {
   grid-area: "main";
@@ -30,9 +30,6 @@
     font-weight: 300;
     text-align: center;
   }
-}
-
-.stackedBoxes {
 }
 
 .phaseTitle {

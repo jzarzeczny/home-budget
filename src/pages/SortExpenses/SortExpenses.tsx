@@ -14,7 +14,7 @@ export const SortExpensesPage = () => {
     <Layout>
       <main className={styles.main}>
         <SectionTitle text="Zarządzaj kosztami" />
-        <p className={styles.main__text}>
+        <p className={styles.mainText}>
           Tworzenie kategorii ma za zadanie pogrupować koszty. Dzięki temu
           będziesz w stanie pogrupować swoje wydatki według własnego uznania.
           Będziesz miał kontrolę nad tym na co i ile wydajesz w danym miesiącu.
