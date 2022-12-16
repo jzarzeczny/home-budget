@@ -1,40 +1,46 @@
 import { Button, ButtonSize } from "components/common/Button/Button";
 import { TextInput } from "components/common/Form/TextInput/TextInput";
 import { Layout } from "components/common/Layout/Layout";
+import { MainText } from "components/common/MainText/MainText";
 import {
   FeatureTitle,
   SectionTitle,
 } from "components/common/SectionTitle/SectionTitle";
-import React from "react";
 import styles from "./SortExpenses.module.scss";
-// import styles from "./SortExpenses.module.scss";
 
 export const SortExpensesPage = () => {
   return (
     <Layout>
       <main className={styles.main}>
-        <SectionTitle text="Zarządzaj kosztami" />
-        <p className={styles.mainText}>
-          Tworzenie kategorii ma za zadanie pogrupować koszty. Dzięki temu
-          będziesz w stanie pogrupować swoje wydatki według własnego uznania.
-          Będziesz miał kontrolę nad tym na co i ile wydajesz w danym miesiącu.
-          <br />
-          <br />
-          Kategorie mogą być bardzo szczegółowe np. papierosy. Mogą również
-          zawierać wiele różnych produktów, które grupujesz według własnego
-          uznania np. zakupy lub chemia.
-          <br />
-          <br />
-          To ty jesteś najlepszy w segregowaniu własnych kosztów. Eksperymentuj,
-          znajdź sposób który w najlepszy sposób pozwoli Ci zbadać swoje koszta!
-        </p>
-        <FeatureTitle text="Dodaj nowe koszta" />
-        <form>
-          <TextInput inputName="expensesName" labelText="Nazwa" />
-          <TextInput inputName="expensesPlace" labelText="Miejsce" />
-          <TextInput inputName="expensesCost" labelText="Koszt" />
-          <Button content="Zapisz" size={ButtonSize.small} />
-        </form>
+        <div className={styles.introContainer}>
+          <SectionTitle text="Zarządzaj kosztami" />
+          <MainText>
+            Tworzenie kategorii ma za zadanie pogrupować koszty. Dzięki temu
+            będziesz w stanie pogrupować swoje wydatki według własnego uznania.
+            Będziesz miał kontrolę nad tym na co i ile wydajesz w danym
+            miesiącu.
+            <br />
+            <br />
+            Kategorie mogą być bardzo szczegółowe np. papierosy. Mogą również
+            zawierać wiele różnych produktów, które grupujesz według własnego
+            uznania np. zakupy lub chemia.
+            <br />
+            <br />
+            To ty jesteś najlepszy w segregowaniu własnych kosztów.
+            Eksperymentuj, znajdź sposób który w najlepszy sposób pozwoli Ci
+            zbadać swoje koszta!
+          </MainText>
+          <p className={styles.mainText}></p>
+        </div>
+        <div className={styles.formContainer}>
+          <FeatureTitle text="Dodaj nowe koszta" />
+          <form className={styles.costForm}>
+            <TextInput inputName="expensesName" labelText="Nazwa" />
+            <TextInput inputName="expensesPlace" labelText="Miejsce" />
+            <TextInput inputName="expensesCost" labelText="Koszt" />
+            <Button content="Zapisz" size={ButtonSize.small} />
+          </form>
+        </div>
 
         <FeatureTitle text="Przypisz koszt do kategorii" />
         <div className={styles.container}>
